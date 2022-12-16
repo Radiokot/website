@@ -19,7 +19,13 @@
     {% include head_styles.html %}
 </head>
 
-<body style="background: url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat;">
+<style>
+    body {
+        
+        background: {{ page.background_color}} {% if page.has_background_image %} url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat {% endif %};
+    }
+</style>
+<body>
     <div class="container">
         <br>
         <article class="full-article">
