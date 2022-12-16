@@ -21,21 +21,18 @@
 
 <style>
     body {
-        
         background: {{ page.background_color}} {% if page.has_background_image %} url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat {% endif %};
     }
 </style>
+
 <body>
     <div class="container">
         <br>
         <article class="full-article">
             <center>
-                <a class="hidden-link" href="../../">
-                    <header>
-                        <img id="avatar" src="../../assets/img/me.jpg" />
-                        <small id="name">Oleg Koretsky</small>
-                    </header>
-                </a>
+                {% assign author = site.authors | where: 'short_name', page.author | first %}
+                {% include author_badge.html %}
+
                 <h1 itemprop="name">{{ page.title }}</h1>
             </center>
 
