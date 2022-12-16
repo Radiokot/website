@@ -38,10 +38,12 @@
 
             {{ content }}
 
+            {% if page.has_footer_image %}
             <center>
                 <img class="footer-img" alt="{{ page.title }}"
                     src="{% link /assets/img/{{ page.slug }}/footer.png %}" />
             </center>
+            {% endif %}
         </article>
         <br>
     </div>
