@@ -1,0 +1,16 @@
+---
+layout: default
+title: "Happy Jekylling!"
+---
+
+<p>Oleg, you're ready to go! Start developing your Jekyll website.</p>
+<br>
+
+<ul>
+    {% for project in site.projects %}
+    <li>
+        <h2><a href="{{ project.url }}">{{ project.name }}</a></h2>
+        <img src="{% link /assets/img/{{ project.slug }}/thumbnail.jpg %}"></img>
+    </li>
+    {% endfor %}
+</ul>
