@@ -1,0 +1,180 @@
+html, body {
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	top: 0;
+	background-color: #f5f8fd;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.hidden-link {
+    text-decoration: none;
+    color: inherit
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	background-color: #2d241d;
+	overflow-y: hidden;
+	text-align: right;
+	color: #f2f2f2;
+    padding: 20vh 50px 0 50px;
+}
+
+#avatar {
+	border-radius: 50%;
+	width: 110px;
+	height: 110px;
+}
+
+#header h1 {
+	margin-bottom: -5pt;
+}
+
+#header #social_buttons {
+	margin-top: 5vh;
+}
+
+#header #social_buttons svg {
+	fill: currentColor;
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+	opacity: 0.8;
+	transition: all ease-out 100ms;
+}
+
+#header #social_buttons svg:hover {
+	opacity: 1;
+}
+
+#header #email {
+	font-size: 8pt;
+	opacity: 0.8;
+	transition: all ease-out 100ms;
+}
+
+#header #email:hover {
+	opacity: 1;
+}
+
+.feed-entry {
+	transition: .35s ease-out;
+	display: flex;
+	margin-top: 35px;
+	border-radius: 6px;
+}
+
+.feed-entry-even {
+	flex-direction: row;
+}
+
+.feed-entry-odd {
+	flex-direction: row-reverse;
+}
+
+.feed-entry .img-container {
+	display: flex;
+	align-items: center;
+}
+
+.feed-entry .img-container img {
+	transition: .3s ease-out;
+	width: 100%;
+	border-radius: 6px;
+	box-shadow: 2px 0px 10px #c5c5c5;
+}
+
+.feed-entry:hover {
+	background: white;
+}
+
+.feed-entry:hover .img-container img {
+	transform: scale(1.07);
+}
+
+.feed-entry h3 {
+	margin: 25px 0;
+}
+
+#content {
+	color: #484848;
+	padding: 18vh 30px 30px 30px;
+}
+
+.full-article {
+	text-align: justify;
+	background-color: white;
+	padding: 30px 50px 0px;
+	font-size: 12pt;
+	margin: 0px 10% 0px 10%;
+	border-radius: 6px;
+	color: #212121;
+}
+
+.full-article h1 {
+	font-size: 32pt;
+	margin-bottom: 60px;
+}
+
+.full-article p {
+	text-indent: 16pt;
+}
+
+.full-article .footer-img {
+	width: 95%;
+	vertical-align: bottom;
+}
+
+.full-article header {
+	display: table;
+	margin-bottom: 50px;
+}
+
+.full-article header #name {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10pt;
+	color: gray;
+	font-size: 12pt;
+}
+
+.full-article header #avatar {
+	width: 35px;
+	height: 35px;
+}
+
+.button {
+	text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    height: 36pt;
+    line-height: 36pt;
+    border-radius: 4px;
+    font-weight: 600;
+    padding: 0px 16pt 0px 16pt;
+    border: solid 1px black;
+    white-space: nowrap;
+	transition: all ease-out 100ms;
+	margin: 20px 20px 0px 0px;
+}
+
+.button:hover {
+	background: #f3f3f3;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 53.1%;
+	padding-top: 25px;
+	height: 0;
+}
+.video-container iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}

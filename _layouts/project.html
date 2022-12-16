@@ -1,0 +1,49 @@
+---
+---
+
+<!DOCTYPE html>
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta property="og:image" content="{{ " /assets/img/" | append: page.slug | append: "/thumbnail.jpg" | absolute_url
+        }}">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="340">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+    <meta property="og:description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="{% link /assets/img/favicon.ico %}" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+
+    {% include head_styles.html %}
+</head>
+
+<body style="background: url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat;">
+    <div class="container">
+        <br>
+        <article class="full-article">
+            <center>
+                <a class="hidden-link" href="../../">
+                    <header>
+                        <img id="avatar" src="../../assets/img/me.jpg" />
+                        <small id="name">Oleg Koretsky</small>
+                    </header>
+                </a>
+                <h1 itemprop="name">{{ page.title }}</h1>
+            </center>
+
+            {{ content }}
+
+            <center>
+                <img class="footer-img" alt="{{ page.title }}"
+                    src="{% link /assets/img/{{ page.slug }}/footer.png %}" />
+            </center>
+        </article>
+        <br>
+    </div>
+</body>
+
+{% include bottom_styles.html %}
+
+</html>
