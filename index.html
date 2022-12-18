@@ -10,7 +10,7 @@ title: "Happy Jekylling!"
     {% for project in site.projects %}
     <li>
         <h2><a href="{{ project.url }}">{{ project.title }}</a></h2>
-        <img src="{% link /assets/img/{{ project.slug }}/thumbnail.jpg %}"></img>
+        <img width="300" src="{% link /assets/img/{{ project.slug }}/thumbnail.jpg %}"></img>
     </li>
     {% endfor %}
 </ul>
