@@ -13,22 +13,22 @@
     <meta property="og:site_name" content="{{ site.title }}">
     <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
     <meta property="og:description" content="{{ page.description }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="{% link /assets/img/favicon.ico %}" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% link /assets/img/favicon.ico %}" rel="shortcut icon" type="image/vnd.microsoft.icon">
 
     {% include head_styles.html %}
-</head>
 
-<style>
-    html, body {
-        background: {{ page.background_color}} {% if page.has_background_image %} url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat {% endif %};
-    }
-</style>
+    <style>
+        html, body {
+            background: {{ page.background_color}} {% if page.has_background_image %} url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat {% endif %};
+        }
+    </style>
+</head>
 
 <body>
     <div class="container">
         <br>
-        <article class="full-article">
+        <article class="full-article" itemscope itemtype="http://schema.org/Article">
             <center>
                 {% assign author = site.authors | where: 'short_name', page.author | first %}
                 {% include author_badge.html %}
@@ -41,14 +41,13 @@
             {% if page.has_footer_image %}
             <center>
                 <img class="footer-img" alt="{{ page.title }}"
-                    src="{% link /assets/img/{{ page.slug }}/footer.png %}" />
+                    src="{% link /assets/img/{{ page.slug }}/footer.png %}">
             </center>
             {% endif %}
         </article>
         <br>
     </div>
+
+    {% include bottom_styles.html %}
 </body>
-
-{% include bottom_styles.html %}
-
 </html>
