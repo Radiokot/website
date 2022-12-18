@@ -33,7 +33,7 @@
                 {% assign author = site.authors | where: 'short_name', page.author | first %}
                 {% include author_badge.html %}
 
-                <h1 itemprop="name">{{ page.title }}</h1>
+                <h1 itemprop="name">{% if page.is_dead %}{% include emoji.html emoji='headstone' %}{% endif %} {{ page.title }}</h1>
             </center>
 
             {{ content }}
