@@ -8,6 +8,14 @@ collections:
   projects:
     output: true
     permalink: /p/:title
+    order:
+      - voda.html
+      - physical-object-layout.html
+      - citatnik.html
+      - feed.html
+      - hammill.html
+      - vkdocs.html
+      - likechecker.html
 
 defaults:
   - scope:
