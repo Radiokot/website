@@ -4,6 +4,8 @@
 <html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
+        {% include head_styles.html %}
+
         <title>{{ site.title }}</title>
         <meta property="og:image" content="{{ "/assets/img/og-image.jpg" | absolute_url }}">
         <meta property="og:image:width" content="1200">
@@ -11,11 +13,6 @@
         <meta property="og:site_name" content="{{ site.title }}">
         <meta property="og:title" content="Меня зовут Олег">
         <meta property="og:description" content="{{ site.description  }}">
-
-        <link
-            href="{% link /assets/img/favicon.ico %}"
-            rel="shortcut icon"
-            type="image/vnd.microsoft.icon"> {% include head_styles.html %}
 
         <script>
             var hash = window.location.hash;
@@ -41,7 +38,7 @@
                 id="avatar"
                 src="assets/img/me.jpg"
                 srcset="assets/img/me@2x.jpg 2x"
-                alt="Олег Корецкий" />
+                alt="Олег Корецкий">
             <h1>Меня зовут Олег</h1>
             <p>{{ site.description }}</p>
             <div id="social_buttons">
@@ -125,8 +122,7 @@
 
                 <br><br>
                 <h1>Проекты</h1>
-                <div
-                    class="feed">
+                <div class="feed">
                     {% for project in site.projects %}
                         <a class="hidden-link" href="{{ project.url }}">
                             {% assign mod_2 = forloop.index0 | modulo: 2 %}

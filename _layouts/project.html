@@ -4,62 +4,58 @@
 <!DOCTYPE html>
 <html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml">
 
-  <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
-    <meta property="og:image" content="{{ "/assets/img/" | append: page.slug | append: "/thumbnail.jpg" | absolute_url }}">
-    <meta property="og:image:width" content="600">
-    <meta property="og:image:height" content="340">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
-    <meta property="og:description" content="{{ page.description }}">
-    <link
-      href="{% link /assets/img/favicon.ico %}"
-      rel="shortcut icon"
-      type="image/vnd.microsoft.icon">
+    <head>
+        {% include head_styles.html %}
 
-    {% include head_styles.html %}
+        <title>{{ page.title }} - {{ site.title }}</title>
+        <meta property="og:image" content="{{ "/assets/img/" | append: page.slug | append: "/thumbnail.jpg" | absolute_url }}">
+        <meta property="og:image:width" content="600">
+        <meta property="og:image:height" content="340">
+        <meta property="og:site_name" content="{{ site.title }}">
+        <meta property="og:title" content="{{ page.title }} - {{ site.title }}">
+        <meta property="og:description" content="{{ page.description }}">
 
-    <style>
-      html,
-      body {
-        background: {{ page.background_color}}
-        {% if page.has_background_image %}
-          url({% link /assets/img/{{ page.slug}}/bg.png %}) repeat{% endif %};
-      }
-    </style>
-  </head>
+        <style>
+            html,
+            body {
+                background: {{ page.background_color}}
+                {% if page.has_background_image %}
+                    url({% link /assets/img/projects/{{ page.slug}}/bg.png %}) repeat{% endif %};
+            }
+        </style>
+    </head>
 
-  <body>
-    <div class="container">
-      <br>
-      <article
-        class="full-article"
-        itemscope
-        itemtype="http://schema.org/Article">
-        <center>
-          {% assign author = site.authors | where: 'short_name', page.author | first %}
-          {% include author_badge.html %}
+    <body>
+        <div class="container">
+            <br>
+            <article
+                class="full-article"
+                itemscope
+                itemtype="http://schema.org/Article">
+                <center>
+                    {% assign author = site.authors | where: 'short_name', page.author | first %}
+                    {% include author_badge.html %}
 
-          <h1 itemprop="name">
-            {% if page.is_dead %}
-              {% include emoji.html emoji = 'headstone' %}{% endif %}
-            {{ page.title }}</h1>
-        </center>
+                    <h1 itemprop="name">
+                        {% if page.is_dead %}
+                            {% include emoji.html emoji = 'headstone' %}{% endif %}
+                        {{ page.title }}</h1>
+                </center>
 
-        {{ content }}
+                {{ content }}
 
-        {% if page.has_footer_image %}
-          <center>
-            <img
-              class="footer-img"
-              alt="{{ page.title }}"
-              src="{% link /assets/img/{{ page.slug }}/footer.png %}">
-          </center>
-        {% endif %}
-      </article>
-      <br>
-    </div>
+                {% if page.has_footer_image %}
+                    <center>
+                        <img
+                            class="footer-img"
+                            alt="{{ page.title }}"
+                            src="{% link /assets/img/projects/{{ page.slug }}/footer.png %}">
+                    </center>
+                {% endif %}
+            </article>
+            <br>
+        </div>
 
-    {% include bottom_styles.html %}
-  </body>
+        {% include bottom_styles.html %}
+    </body>
 </html>
