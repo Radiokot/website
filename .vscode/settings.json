@@ -1,3 +1,6 @@
 {
+    "files.associations": {
+        "*.html": "liquid"
+    },
     "liquid.format.enable": true
 }
