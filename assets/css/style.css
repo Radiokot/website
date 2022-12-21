@@ -180,5 +180,6 @@ html, body {
 }
 
 img.emoji {
-	height: 1em;
+	height: 1.2em;
+	vertical-align: sub;
 }
