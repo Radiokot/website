@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
 	min-height: 100vh;
 	padding: 0;
 	margin: 0;
@@ -8,19 +9,22 @@ html, body {
 }
 
 .hidden-link {
-    text-decoration: none;
-    color: inherit
+	text-decoration: none;
+	color: inherit
 }
 
 #header {
 	position: fixed;
 	top: 0;
 	height: 100%;
-	background-color: #2d241d;
+
+	/* To be changed by JS*/
+	background: #2d241d;
+
 	overflow-y: hidden;
 	text-align: right;
 	color: #f2f2f2;
-    padding: 20vh 50px 0 50px;
+	padding: 20vh 50px 0 50px;
 }
 
 #avatar {
@@ -148,15 +152,15 @@ html, body {
 
 .button {
 	text-decoration: none;
-    color: inherit;
-    display: inline-block;
-    height: 36pt;
-    line-height: 36pt;
-    border-radius: 4px;
-    font-weight: 600;
-    padding: 0px 16pt 0px 16pt;
-    border: solid 1px black;
-    white-space: nowrap;
+	color: inherit;
+	display: inline-block;
+	height: 36pt;
+	line-height: 36pt;
+	border-radius: 4px;
+	font-weight: 600;
+	padding: 0px 16pt 0px 16pt;
+	border: solid 1px black;
+	white-space: nowrap;
 	transition: all ease-out 100ms;
 	margin: 20px 20px 0px 0px;
 }
@@ -171,6 +175,7 @@ html, body {
 	padding-top: 25px;
 	height: 0;
 }
+
 .video-container iframe {
 	position: absolute;
 	top: 0;
