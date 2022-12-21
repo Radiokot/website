@@ -1,0 +1,26 @@
+# TODO: Include blog to the site
+
+- slug: streetster-spitfire
+  title: Обновил городской велосипед
+  description: Придал своему Streetster Broadway 7 шоссейный вид. Жаль, что легче он от этого не стал
+  url: https://blog.radiokot.com.ua/streetster-spitfire
+
+- slug: premium-rush
+  title: Проехал ночной городской бревет
+  description: 19 марта	состоялся ночной 200 км бревет в границах города от клуба Audax Kharkov. Посмотрите как это было в видео Ромы Орлова
+  url: https://www.youtube.com/watch?v=CZuaFuyhZ9c
+
+- slug: borshik-2020
+  title: Испытал себя на 400 км бревете «Борщик»
+  description: Ежегодный заезд от клуба Audax Kharkov на фестиваль «Борщик у глиняному горщику». Рассказываю как это было и что я чувствовал
+  url: https://blog.radiokot.com.ua/borshik-2020
+
+- slug: war-2022-1
+  title: 2022 год, война, мы больше не в Харькове
+  description: С 24 февраля 2022 года началась полномасштабная война РФ с Украиной, с моей страной, с моим городом
+  url: https://blog.radiokot.com.ua/war-2022-1
+
+- slug: header-photos-2022
+  title: Места на фоновых фотографиях, тогда и сейчас
+  description: На фоне в заголовке сайта – Харьков и область, война оставила свой след на некоторых из этих мест
+  url: https://blog.radiokot.com.ua/header-photos-2022
