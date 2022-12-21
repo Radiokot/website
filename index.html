@@ -7,7 +7,7 @@
         {% include head_styles.html %}
 
         <title>{{ site.title }}</title>
-        <meta property="og:image" content="{{ " /assets/img/og-image.jpg" | absolute_url }}">
+        <meta property="og:image" content="{{ "/assets/img/og-image.jpg" | absolute_url }}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="650">
         <meta property="og:site_name" content="{{ site.title }}">
@@ -137,7 +137,7 @@
                                 <div class="text-container col-lg-6 col-xl-7">
                                     <h3>
                                         {% if project.is_dead %}
-                                            {% include emoji.html name = 'headstone', actual = '🪦' %}
+                                            {% include emoji.html name = 'headstone' actual = '🪦' %}
                                         {% endif %}
                                         {{ project.title }}</h3>
                                     <p>{{ project.description }}</p>
