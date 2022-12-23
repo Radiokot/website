@@ -44,3 +44,13 @@ jobs:
           remote_host: ${{ secrets.HOSTNAME }}
           remote_user: ${{ secrets.WEB_USER_NAME }}
           remote_key: ${{ secrets.WEB_USER_KEY }}
+
+      - name: Purge Cloudflare cache
+        uses: fifsky/ssh-action@master
+        continue-on-error: true
+        with:
+          command: |
+            ./purge_cloudflare_cache.sh
+          host: ${{ secrets.HOSTNAME }}
+          user: ${{ secrets.WEB_USER_NAME }}
+          key: ${{ secrets.WEB_USER_KEY }}
