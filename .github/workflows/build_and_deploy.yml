@@ -6,32 +6,45 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    
-    environment: DO
+  build:    
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
     
-    - name: Build the site in the jekyll/builder container
+    - name: Build the site
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
-        
-    - name: Rsync built content to the environment    
-      uses: burnett01/rsync-deployments@5.2.1
-      with:
-        switches: -avzr
-        path: _site/
-        remote_path: ${{ secrets.DEPLOYMENT_PATH }}
-        remote_host: ${{ secrets.HOSTNAME }}
-        remote_user: ${{ secrets.WEB_USER_NAME }}
-        remote_key: ${{ secrets.WEB_USER_KEY }}
-      
-    - name: Upload built content to GitHub
+          
+    - name: Upload the build
       uses: actions/upload-artifact@v3
       with:
         name: site
         path: ${{ github.workspace }}/_site/
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment: DO
+    needs: build
+
+    steps:
+      - name: Download the build
+        uses: actions/download-artifact@v3
+        with:
+          name: site
+      
+      - name: Display structure of downloaded files
+        run: ls -R
+      # - name: Rsync the build to the environment    
+      #   uses: burnett01/rsync-deployments@5.2.1
+      #   with:
+      #     switches: -avzr
+      #     path: _site/
+      #     remote_path: ${{ secrets.DEPLOYMENT_PATH }}
+      #     remote_host: ${{ secrets.HOSTNAME }}
+      #     remote_user: ${{ secrets.WEB_USER_NAME }}
+      #     remote_key: ${{ secrets.WEB_USER_KEY }}
+    
