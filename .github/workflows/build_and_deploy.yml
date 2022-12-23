@@ -24,7 +24,7 @@ jobs:
       uses: burnett01/rsync-deployments@5.2.1
       with:
         switches: -avzr
-        path: ${{ github.workspace }}/_site/
+        path: _site/
         remote_path: ${{ secrets.DEPLOYMENT_PATH }}
         remote_host: ${{ secrets.HOSTNAME }}
         remote_user: ${{ secrets.WEB_USER_NAME }}
