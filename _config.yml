@@ -28,3 +28,6 @@ defaults:
       has_footer_image: true
       author: "oleg"
       is_dead: false
+
+exclude:
+  - "README.md"
