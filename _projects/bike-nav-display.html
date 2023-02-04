@@ -1,0 +1,84 @@
+---
+title: Bike navigation display
+description: A simple Arduino-based wireless display that helps me navigate through my bike rides
+author: oleg_en
+background_color: "#000000"
+has_background_image: false
+has_footer_image: false
+---
+<p>I truly enjoy riding my bicycle. Although I usually choose a well known
+    route, sometimes the spirit of exploration makes me draw a route through the
+    area I've never visited before. I can't remember all the turns in advance, so I
+    have to rely on track navigation, for which I used OsmAnd. But this means I need
+    to get directions somehow. I have no bike computer and I also didn't want to
+    mount my phone on the handlebar – the phone gets discharged very quick with the
+    screen constantly turned on, and the setup looks unreliable. I neither wanted to
+    ride with headphones nor turn on loud voice navigation – I didn't want to lose a
+    direction because of the wind, neither to draw extra attention. What I wanted
+    was a visual navigation helper, power efficient and easily visible under the
+    sun.</p>
+<p>I've made a simple wireless display to help me. It shows the map data
+    received from the Android app. The main components of the display are an Arduino
+    board, a 1.54″ e-ink screen, a Li-Po battery and a BLE 5.0 serial module. The
+    app subscribes to the GPS location updates and uses Mapbox SDK with my
+    minimalistic black&white map style to compose frames.</p>
+<center>
+    <a class="hidden-link" href="{% link /assets/img/projects/bike-nav-display/prototype.jpg %}">
+        <img
+            src="{% link /assets/img/projects/bike-nav-display/prototype.jpg %}"
+            width="400"
+            alt="Prototyping" />
+    </a>
+    <a class="hidden-link" href="{% link /assets/img/projects/bike-nav-display/ride.jpg %}">
+        <img
+            src="{% link /assets/img/projects/bike-nav-display/ride.jpg %}"
+            width="225"
+            alt="On a bike" />
+    </a>
+    <a class="hidden-link" href="{% link /assets/img/projects/bike-nav-display/leaf.jpg %}">
+        <img
+            src="{% link /assets/img/projects/bike-nav-display/leaf.jpg %}"
+            width="260"
+            alt="On a bike" />
+    </a>
+    <a class="hidden-link" href="{% link /assets/img/projects/bike-nav-display/app.png %}">
+        <img
+            src="{% link /assets/img/projects/bike-nav-display/app.png %}"
+            width="156"
+            alt="The app" />
+    </a>
+</center>
+<p>Overall, the display capabilities are the following:</p>
+<ul>
+    <li>Showing the current location on the map, which is rotated according to the
+        bearing</li>
+    <li>Showing a track on the map</li>
+    <li>Importing tracks from .geojson files or from the
+        <a href="https://brouter.de/brouter-web" target="_blank">BRouter web interface</a>
+    </li>
+    <li>Offline work, all the required map data is downloaded during the track import</li>
+    <li>Showing step-by-step navigation directions from
+        <a href="https://osmand.net/" target="_blank">OsmAnd</a>, which was the original purpose of the display, but turned out to be useless</li>
+    <li>Long battery life thanks to Bluetooth Low Energy and Arduino frequency
+        divider – can be even longer though</li>
+</ul>
+<center>
+    <a
+        class="button"
+        target="_blank"
+        href="https://github.com/Radiokot/osmand-display">
+        Code on GitHub</a>
+    <a class="button">
+        How it was build (coming soon)</a>
+</center>
+<br>
+<p>With this little thing I can explore new areas on my bike and don’t get lost
+    or have to stop at every junction to check the route. This was my first portable
+    wireless device, and although it is very simple and far less fancy than the
+    market products, I consider this project a success and a great experience. It
+    has brought me one of the feelings I really like – when you’ve successfully
+    solved a practical life problem by making something yourself, whether it is an
+    app, a device or even a useful spreadsheet.</p>
+<p>I want to give my deep gratitude to my wife for believing in me and not
+    letting me give up in moments of disappointment {% include emoji.html name = 'heart' actual = '❤️' %}</p>
+<br>

@@ -9,6 +9,7 @@ collections:
     output: true
     permalink: /p/:title
     order:
+      - bike-nav-display.html
       - voda.html
       - physical-object-layout.html
       - citatnik.html
