@@ -1,7 +1,7 @@
 url: "https://radiokot.com.ua" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 title: "Олег Корецкий" # the name of your site, e.g. ACME Corp.
-description: "Я живу в Украине и порой делаю что-то интересное"
+description: "Я люблю решать практические задачи с помощью программирования и электроники"
 
 collections:
   authors:
