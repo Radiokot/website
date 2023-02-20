@@ -32,3 +32,4 @@ defaults:
 
 exclude:
   - "README.md"
+  - "start_dev.sh"
