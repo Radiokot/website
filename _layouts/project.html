@@ -8,7 +8,8 @@
         {% include head_styles.html %}
 
         <title>{{ page.title }} - {{ site.title }}</title>
-        <meta property="og:image" content="{{ "/assets/img/" | append: page.slug | append: "/thumbnail.jpg" | absolute_url }}">
+        {% assign og_image_path = "/assets/img/projects/" | append: page.slug | append: "/thumbnail.jpg" %}
+        <meta property="og:image" content="{{ og_image_path | absolute_url}}" data-check-existence="{% link {{ og_image_path }} %}">
         <meta property="og:image:width" content="600">
         <meta property="og:image:height" content="340">
         <meta property="og:site_name" content="{{ site.title }}">
