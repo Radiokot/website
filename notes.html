@@ -1,0 +1,72 @@
+---
+---
+<!DOCTYPE html>
+<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        {% include head_styles.html %}
+
+        <title>Заметки – {{ site.title }}</title>
+        {% assign og_image_path = "/assets/img/og-image.jpg" %}
+        <meta
+            property="og:image"
+            content="{{ og_image_path | append: "?v=1" | absolute_url}}"
+            data-check-existence="{% link {{ og_image_path }} %}">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="650">
+        <meta property="og:site_name" content="{{ site.title }}">
+        <meta property="og:title" content="Меня зовут Олег">
+        <meta property="og:description" content="{{ site.description  }}">
+        <meta property="og:url" content="{{ site.url }}">
+    </head>
+    <body>
+        <div id="content">
+            <div class="container notes">
+                <a class="hidden-link" href="{{ site.url }}">
+                    <header>
+                        <img
+                            id="avatar"
+                            src="assets/img/me.jpg"
+                            srcset="assets/img/me@2x.jpg 2x"
+                            alt="{{ site.title }}">
+                        <h1 id="name">{{ site.title }}</h1>
+                    </header>
+                </a>
+
+                <h1>Заметки</h1>
+                <div class="feed">
+
+                    {% for post in site.data.blog_posts reversed %}
+                        <a class="hidden-link" href="{{ post.url }}">
+                            {% assign mod_2 = forloop.index0 | modulo: 2 %}
+                            <article
+                                class="feed-entry row
+                                {% if mod_2 == 0 %}
+                                    feed-entry-even
+                                {% else %}
+                                    feed-entry-odd
+                                {% endif %}">
+                                <div class="text-container col-lg-6 col-xl-7">
+                                    <h3>{{ post.title }}</h3>
+                                    <p>{{ post.description }}</p>
+                                </div>
+                                <div class="img-container col-lg-6 col-xl-5">
+                                    <img src="{% link /assets/img/blog_posts/{{ post.slug }}/thumbnail.jpg %}"alt="{{
+                                    post.title }}">
+                                </div>
+                            </article>
+                        </a>
+                    {% endfor %}
+                </div>
+
+                <br>
+                <center>
+                    <a class="button" href="{{ site.url }}">На главную</a>
+                </center>
+
+            </div>
+        </div>
+
+        {% include bottom_styles.html %}
+    </body>
+</html>

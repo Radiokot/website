@@ -151,7 +151,7 @@ body {
 	color: inherit;
 	display: inline-block;
 	height: 36pt;
-	line-height: 36pt;
+	line-height: 34pt;
 	border-radius: 8pt;
 	font-weight: 600;
 	padding: 0px 16pt 0px 16pt;
@@ -162,7 +162,7 @@ body {
 }
 
 .button:hover {
-	background: #f3f3f3;
+	background: #0000000B;
 }
 
 .video-container {
@@ -183,4 +183,22 @@ body {
 img.emoji {
 	height: 1.2em;
 	vertical-align: sub;
+}
+
+.notes header {
+	display: table;
+	margin-bottom: 50px;
+}
+
+.notes header #name {
+	display: table-cell;
+	vertical-align: middle;
+	padding-left: 10pt;
+	color: gray;
+	font-size: 18pt;
+}
+
+.notes header #avatar {
+	width: 50px;
+	height: 50px;
 }

@@ -8,7 +8,10 @@
 
         <title>{{ site.title }}</title>
         {% assign og_image_path = "/assets/img/og-image.jpg" %}
-        <meta property="og:image" content="{{ og_image_path | append: "?v=1" | absolute_url}}" data-check-existence="{% link {{ og_image_path }} %}">
+        <meta
+            property="og:image"
+            content="{{ og_image_path | append: "?v=1" | absolute_url}}"
+            data-check-existence="{% link {{ og_image_path }} %}">
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="650">
         <meta property="og:site_name" content="{{ site.title }}">
@@ -97,10 +100,11 @@
         </header>
         <div id="content" class="offset-lg-4 col-lg-8 offset-md-5 col-md-7">
             <div class="container">
-                <h1>Заметки</h1>
+                <a class="hidden-link" href="{% link notes.html %}"><h1>Заметки</h1></a>
                 <div class="feed">
 
-                    {% for post in site.data.blog_posts reversed %}
+                    {% assign sorted_posts = site.data.blog_posts | reverse %}
+                    {% for post in sorted_posts limit: 3 %}
                         <a class="hidden-link" href="{{ post.url }}">
                             {% assign mod_2 = forloop.index0 | modulo: 2 %}
                             <article
@@ -122,6 +126,12 @@
                         </a>
                     {% endfor %}
                 </div>
+
+                <br>
+
+                <center>
+                    <a class="button" href="{% link notes.html %}">Все заметки</a>
+                </center>
 
                 <br><br>
                 <h1>Проекты</h1>
