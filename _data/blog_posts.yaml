@@ -29,3 +29,8 @@
   title: Full customization of address bar and image search engines in Microsoft Edge on Windows
   description: A way to tailor the search to your needs
   url: https://blog.radiokot.com.ua/ms-edge-search
+
+- slug: bike-nav-display
+  title: "Bike navigation display: Making of" 
+  description: In this article, I tell how my bike navigation display was built and highlight all the nuances
+  url: https://blog.radiokot.com.ua/bike-nav-display
