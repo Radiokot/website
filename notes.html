@@ -38,19 +38,13 @@
 
                     {% for post in site.data.blog_posts reversed %}
                         <a class="hidden-link" href="{{ post.url }}">
-                            {% assign mod_2 = forloop.index0 | modulo: 2 %}
                             <article
-                                class="feed-entry row
-                                {% if mod_2 == 0 %}
-                                    feed-entry-even
-                                {% else %}
-                                    feed-entry-odd
-                                {% endif %}">
-                                <div class="text-container col-lg-6 col-xl-7">
+                                class="feed-entry row">
+                                <div class="text-container col-md-6 col-lg-7 col-xl-8">
                                     <h3>{{ post.title }}</h3>
                                     <p>{{ post.description }}</p>
                                 </div>
-                                <div class="img-container col-lg-6 col-xl-5">
+                                <div class="img-container col-md-6 col-lg-5 col-xl-4">
                                     <img src="{% link /assets/img/blog_posts/{{ post.slug }}/thumbnail.jpg %}"alt="{{
                                     post.title }}">
                                 </div>
