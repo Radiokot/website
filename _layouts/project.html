@@ -9,7 +9,10 @@
 
         <title>{{ page.title }} - {{ site.title }}</title>
         {% assign og_image_path = "/assets/img/projects/" | append: page.slug | append: "/thumbnail.jpg" %}
-        <meta property="og:image" content="{{ og_image_path | absolute_url}}" data-check-existence="{% link {{ og_image_path }} %}">
+        <meta
+            property="og:image"
+            content="{{ og_image_path | absolute_url}}"
+            data-check-existence="{% link {{ og_image_path }} %}">
         <meta property="og:image:width" content="600">
         <meta property="og:image:height" content="340">
         <meta property="og:site_name" content="{{ site.title }}">
@@ -47,14 +50,6 @@
 
                 {{ content }}
 
-                {% if page.has_footer_image %}
-                    <center>
-                        <img
-                            class="footer-img"
-                            alt="{{ page.title }}"
-                            src="{% link /assets/img/projects/{{ page.slug }}/footer.png %}">
-                    </center>
-                {% endif %}
             </article>
             <br>
         </div>
