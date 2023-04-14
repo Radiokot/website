@@ -1,3 +1,6 @@
+{% assign style_path = "/assets/css/style.css" %}
+{% assign media_path = "/assets/css/media.css" %}
+
 <link
     href="{% link /assets/img/favicon.png %}"
     rel="shortcut icon"
@@ -11,11 +14,13 @@
     type="text/css">
 
 <link
-    href="{% link /assets/css/style.css %}"
+    href="{{ style_path | relative_url | append: "?v=1" }}"
+    data-check-existence="{% link {{style_path}} %}"
     rel="stylesheet"
     type="text/css">
 
 <link
-    href="{% link /assets/css/media.css %}"
+    href="{{ media_path | relative_url | append: "?v=1" }}"
+    data-check-existence="{% link {{media_path}} %}"
     rel="stylesheet"
     type="text/css">
