@@ -203,3 +203,23 @@ img.emoji {
     width: 50px;
     height: 50px;
 }
+
+.collapsible .collapsible-opener {
+    max-width: 35%;
+    width: 100%;
+    text-align: center;
+}
+
+.collapsible .collapsible-content {
+    background-color: white;
+    padding: 1px 16px 1px 16px;
+    margin-top: 16px;
+    border-radius: 8px;
+    color: #212121;
+    max-width: 70%;
+    display: none;
+}
+
+.collapsible .collapsible-content-expanded {
+    display: block;
+}

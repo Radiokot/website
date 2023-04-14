@@ -18,6 +18,14 @@
     .full-article {
         margin: 0px;
     }
+    
+    .collapsible .collapsible-opener {
+        max-width: none;
+    }
+
+    .collapsible .collapsible-content {
+        max-width: none;
+    }
 }
 
 /* Smallest */
