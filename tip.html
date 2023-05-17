@@ -65,9 +65,9 @@ permalink: /tip
                         {% include emoji.html name = 'lightning' actual = '⚡' %} Bitcoin Lightning</a>
                     <div class="collapsible-content">
                         <lightning-widget
-                            name="oleg@radiokot.com.ua"
+                            name="{{ site.lightning }}"
                             accent="#ffffff"
-                            to="oleg@radiokot.com.ua"
+                            to="{{ site.lightning }}"
                             amounts="1000,10000,20000"
                             labels="😉,😏,🤩" />
                         <script src="{% link /assets/lib/js/twentyuno.js %}"></script>
