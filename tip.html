@@ -75,6 +75,22 @@ permalink: /tip
                 </div>
                 <div class="collapsible">
                     <a class="button collapsible-opener" href="#">
+                        {% include emoji.html name = 'lightning' actual = '⚡' %} Bitcoin Lightning
+                        subscription</a>
+                    <div class="collapsible-content">
+                        <p>Developers of the Alby wallet launched
+                            <a href="https://zapplanner.albylabs.com/" target="_blank">ZapPlanner</a>
+                            – a tool that helps you setting up periodic Lightning payments.</p>
+                        <p>If you would like to set up your donation as a subscription, I recommend
+                            using this tool. Be sure to enter your email address once the payment is set up,
+                            you'll receive a unique subscription management link.</p>
+                        <p>My address is
+                            <b>{{ site.lightning }}</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="collapsible">
+                    <a class="button collapsible-opener" href="#">
                         {% include emoji.html name = 'paypal' actual = '' %} PayPal</a>
                     <div class="collapsible-content">
                         <p>Please, make a direct USD transfer to my account: spirit111@ukr.net</p>
