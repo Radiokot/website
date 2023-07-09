@@ -5,11 +5,10 @@ author: oleg_en
 background_color: "#212121"
 ---
 <p>
-    <span itemprop="description">Some popular Bitcoin Lightning wallets, like Muun or Blue Wallet,
-        don't support email-like Lightning addresses. This app allows paying to such
-        addresses by turning them to convenient invoices.</span> For me, it is helpful
-        when zapping and tipping in Nostr.
-</p>
+    <span itemprop="description">Some popular Bitcoin Lightning wallets, like Muun
+        or Blue Wallet, don't support email-like Lightning addresses. This app allows
+        paying to such addresses by turning them to convenient invoices.</span>
+    For me, it is helpful when zapping and tipping in Nostr.</p>
 <div class="video-container">
     <iframe
         src="https://www.youtube.com/embed/FMpSQ-l64Cw?color=white&modestbranding=1&rel=0"
@@ -37,9 +36,8 @@ background_color: "#212121"
         class="button"
         href="https://github.com/Radiokot/ln-addr-to-invoice"
         target="_blank">Code on GitHub</a>
-    <a
-        class="button"
-        href="lightning:oleg@radiokot.com.ua">{% include emoji.html name = 'lightning' actual = '⚡' %} Send me a tip</a>    
+    <a class="button"
+        href="{{ "lightning:" | append: site.lightning }}">{% include emoji.html name = 'lightning' actual = '⚡' %} Send me a tip</a>
 </center>
 <br/><br/><br/>
 <center>
