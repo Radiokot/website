@@ -1,45 +1,44 @@
 ---
 title: Gallery for PhotoPrism
-description: A user-friendly Android gallery that allows browsing your library content and sending it to other apps
+description: A convenient Android gallery for your PhotoPrism library with plenty of useful features
 author: oleg_en
 background_color: "#ccc8ff linear-gradient(220deg, #d1befe, #bde5ff)"
 has_background_image: false
 has_footer_image: false
 ---
 <p>
-    The official progressive web application of the
-    <a href="https://www.photoprism.app/" target="_blank">PhotoPrism library</a>,
-        despite being mobile-friendly, can't be integrated into the phone OS and, no
-        matter what,<a href="https://blog.perryizgr8.com/photos/2023/03/20/google-photos-alt.html#photoprism" target="_blank">
-        feels like a webpage</a>. I actively use PhotoPrism hence decided to make a
-        native gallery and content provider for Android aiming to solve these issues.
-        This app does not (and probably will not) support all the web-client features,
-        but nevertheless it can:<ul>
-        <li>Provide the library content to other Android apps – you can select
-            PhotoPrism Gallery among other galleries when picking a photo or video</li>
-        <li>Open the library content in suitable apps – you can use your favorite image
-            editor or video player instead of web viewer</li>
-    </ul>
-</p>
+    The official web application of the
+    <a href="https://www.photoprism.app/" target="_blank">
+        PhotoPrism open-source photo library</a>, despite being mobile-friendly and well
+        optimized, can't be integrated into the phone OS and, no matter what, feels like
+        a site in a browser rather than a mobile app. Me and my wife started using
+        PhotoPrism as a replacement for Google Photos, and we really missed the
+        convenient mobile gallery experience for it. Hence, I decided to make an own
+        native Android app to solve the problem.</p>
+<p>
+    As I published
+    <a href="https://www.reddit.com/r/photoprism/comments/120hvs9/android_gallery_and_content_provider_for/" target="_blank">
+        the first version</a>, it turned out to be liked by many other PhotoPrism users,
+        which inspired me to further improve the gallery.</p>
 <img
     style="width: 100%;"
     alt="{{ page.title }}"
     src="{% link /assets/img/projects/{{ page.slug }}/screenshots.png %}">
 <p>
-    There are more handy features in the gallery:<ul>
-        <li>Chronological grouping – the content is grouped by days</li>
-        <li>Chronological fast scroll – slide the scroll bar to quickly jump to a
-            specific month</li>
-        <li>Search by media types and custom queries</li>
-        <li>Search bookmarks – the search configuration can be bookmarked and applied
-            later with a click</li>
-        <li>Endless session – no need to re-enter password</li>
+    PhotoPrism Gallery does not support all the official web app functionality, but
+    nevertheless has plenty of useful features:<ul>
+        <li>Sending photos or videos to Gmail, Telegram or any other app</li>
+        <li>Grouping the content by days and months</li>
+        <li>Chronological scroll bar that lets you quickly jump to a specific month</li>
+        <li>Configurable search</li>
+        <li>Search bookmarks that let you save search configurations and apply them later</li>
+        <li>Endless session without the need to re-enter the password</li>
         <li>Connection to both private and public libraries</li>
         <li>Support of mTLS (mutual TLS) and HTTP basic authentication</li>
-        <li>TV compatibility – easy browsing with a remote-control</li>
+        <li>TV compatibility to easily browse your library with a remote-control</li>
     </ul>
-    The gallery is confirmed to work with PhotoPrism versions from June 7, 2023 down
-    to October 9, 2021.</p>
+    The gallery is confirmed to work with PhotoPrism versions from July 19, 2023
+    down to October 9, 2021.</p>
 <center>
     <a
         itemprop="downloadUrl"
