@@ -25,17 +25,17 @@ background_color: "#212121"
         itemprop="downloadUrl"
         class="button"
         href="https://f-droid.org/packages/ua.com.radiokot.lnaddr2invoice/"
-        target="_blank">Download from F-Droid</a>
+        target="_blank">{% include emoji.html name = 'fdroid' %} Get on F-Droid</a>
     <a
         itemprop="downloadUrl"
         class="button"
         href="https://play.google.com/store/apps/details?id=ua.com.radiokot.lnaddr2invoice"
-        target="_blank">Download from Google Play</a>
+        target="_blank">{% include emoji.html name = 'gplay' %} Get on Google Play</a>
     <br>
     <a
         class="button"
         href="https://github.com/Radiokot/ln-addr-to-invoice"
-        target="_blank">Code on GitHub</a>
+        target="_blank">{% include emoji.html name = 'github' %} Project on GitHub</a>
     <a class="button"
         href="{{ "lightning:" | append: site.lightning }}">{% include emoji.html name = 'lightning' actual = '⚡' %} Send me a tip</a>
 </center>
