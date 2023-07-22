@@ -23,7 +23,8 @@ has_footer_image: false
 <img
     style="width: 100%;"
     alt="{{ page.title }}"
-    src="{% link /assets/img/projects/{{ page.slug }}/screenshots.png %}">
+    src="{% link /assets/img/projects/{{ page.slug }}/screenshots.png %}"
+    srcset="{% link /assets/img/projects/{{ page.slug }}/screenshots@2x.png %} 2x">
 <p>
     PhotoPrism Gallery does not support all the official web app functionality, but
     nevertheless has plenty of useful features:<ul>
