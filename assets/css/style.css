@@ -109,11 +109,10 @@ body {
 }
 
 .full-article {
-    text-align: justify;
     background-color: white;
     padding: 30px 50px 0px;
-    font-size: 12pt;
-    line-height: 1.5;
+    font-size: 13pt;
+    line-height: 1.6;
     margin: 0px 10% 0px 10%;
     border-radius: 16px;
     color: #212121;
