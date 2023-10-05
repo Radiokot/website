@@ -91,6 +91,12 @@ body {
     box-shadow: 2px 0px 10px #c5c5c5;
 }
 
+.img-card {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 2px 0px 10px #c5c5c5;
+}
+
 .feed-entry:hover {
     background: white;
 }
