@@ -1,6 +1,14 @@
 {
     "files.associations": {
+        // Associate HTML with liquid to get autocompletion and validation.
         "*.html": "liquid"
     },
-    "liquid.format.enable": true
+
+    "[liquid]": {
+        // But do not use crazy formatter.
+        "editor.defaultFormatter": "vscode.html-language-features",
+        "editor.formatOnSave": false
+    },
+
+    "html.format.wrapLineLength": 100
 }
