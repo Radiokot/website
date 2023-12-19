@@ -4,65 +4,61 @@ permalink: /book-stm
 <!DOCTYPE html>
 <html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
-        {% include head_styles.html %}
+<head>
+    {% include head_styles.html %}
 
-        <title>Sovereignty through mathematics – {{ site.title }}</title>
-        {% assign og_image_path = "/assets/img/book-stm.jpg" %}
-        <meta
-            property="og:image"
-            content="{{ og_image_path | append: "?v=1" | absolute_url}}"
-            data-check-existence="{% link {{ og_image_path }} %}">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="650">
-        <meta property="og:site_name" content="{{ site.title }}">
-        <meta property="og:title" content="Sovereignty through mathematics">
-        <meta property="og:description" content="{{ site.description  }}">
-        <meta property="og:url" content="{{ site.url }}">
-    </head>
-    <body>
-        <div id="content">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 col-lg-5 col-xl-4">
-                        <img
-                            class="img-card"
-                            src="{% link /assets/img/book-stm.jpg %}"
-                            alt="Printed book" />
-                        <br> <br>
-                    </div>
-                    <div class="col-md-6 col-lg-7 col-xl-8">
-                        <h1 style="margin-block-start: 0px;">Sovereignty through mathematics</h1>
-                        <p>Have you ever thought about the nature of money and exchange between people?
-                            Or why some things are called money and why some are better than others? Or why
-                            one can't just save the result of their work in national currency without it
-                            loosing its value with time? If so, I believe you'll find
-                            <a href="https://twitter.com/knutsvanholm" target="_blank">Knut Svanholm's</a>
-                            book "Sovereignty through mathematics" interesting and inspiring. It touches on
-                            the most pressing problems of modern society, both economic and social, and
-                            introduces the newcomer to Bitcoin.
+    <title>Sovereignty through mathematics – {{ site.title }}</title>
+    {% assign og_image_path = "/assets/img/book-stm.jpg" %}
+    <meta property="og:image" content="{{ og_image_path | append: " ?v=1" | absolute_url}}"
+        data-check-existence="{% link {{ og_image_path }} %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="650">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="Sovereignty through mathematics">
+    <meta property="og:description" content="{{ site.description  }}">
+    <meta property="og:url" content="{{ site.url }}">
+</head>
 
-                            <p>Consider supporting the author.</p>
-                        </p>
-
-                        <center>
-                            <a
-                                class="button"
-                                href="{{ "/files/Sovereignty-through-mathematics.pdf" | relative_url }}"
-                                target="_blank">Download PDF</a>
-                            <a
-                                class="button"
-                                href="https://21ideas.org/suverenitet-posredstvom-matematiki/"
-                                target="_blank">Книга на русском</a>
-
-                        </center>
-                    </div>
+<body>
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-5 col-xl-4">
+                    <img class="img-card" src="{% link /assets/img/book-stm.jpg %}"
+                        alt="Printed book" />
+                    <br> <br>
                 </div>
-                <br> <br>
-                <a href="{{ site.url }}">Home</a>
-            </div>
-        </div>
+                <div class="col-md-6 col-lg-7 col-xl-8">
+                    <h1 style="margin-block-start: 0px;">Sovereignty through mathematics</h1>
+                    <p>Have you ever thought about the nature of money and exchange between people?
+                        Or why some things are called money and why some are better than others? Or
+                        why one can't just save the result of their work in national currency
+                        without it loosing its value with time? If so, I believe you'll find
+                        <a href="https://twitter.com/knutsvanholm" target="_blank">Knut
+                            Svanholm's</a>
+                        book "Sovereignty through mathematics" interesting and inspiring. It touches
+                        on the most pressing problems of modern society, both economic and social,
+                        and introduces the newcomer to Bitcoin.
 
-        {% include bottom_styles.html %}
-    </body>
+                    <p>Consider supporting the author.</p>
+                    </p>
+
+                    <center>
+                        <a class="button" href="{{ " /files/Sovereignty-through-mathematics.pdf" |
+                            relative_url }}" target="_blank">Download this book</a>
+                        <a class="button" href="https://nostree.me/tony@21ideas.org/bitcoin-books"
+                            target="_blank">Tony's Bitcoin books</a>
+                        <a class="button" href="https://21ideas.org/books/" target="_blank">Книги на
+                            русском</a>
+                    </center>
+                </div>
+            </div>
+            <br> <br>
+            <a href="{{ site.url }}">Home</a>
+        </div>
+    </div>
+
+    {% include bottom_styles.html %}
+</body>
+
 </html>
