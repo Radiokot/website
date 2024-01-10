@@ -11,6 +11,7 @@ collections:
     output: true
     permalink: /p/:title
     order:
+      - umbrel-cloudflared.html
       - photoprism-android-gallery.html
       - ln-addr-to-invoice.html
       - bike-nav-display.html

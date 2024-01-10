@@ -1,0 +1,67 @@
+---
+title: Cloudflare Tunnel for Umbrel
+description: "An app for Umbrel home server making other apps accessible from the Internet using
+Cloudflare network"
+author: oleg_en
+background_color: "#e9f0f6"
+has_background_image: false
+has_footer_image: false
+---
+<p>Cloudflare has a service called <a href="https://www.cloudflare.com/products/tunnel/"
+        target="_blank">Tunnels</a> – a
+    lightweight VPN-like daemon, cloudflared, once installed on a machine creates outbound-only
+    connections to their global network, making possible serving content accessible from the
+    Internet without having a dedicated (white) IP address.</p>
+
+<p>I wanted to use Tunnel to make few apps on my <a href="https://umbrel.com/umbrelos"
+        target="_blank">Umbrel</a> home server accessible from the Internet.
+    The tunneling daemon can only be set up from a terminal, which is totally fine, but I had an
+    idea that a human-friendly user interface for it could be nice and useful for me and other
+    people. I found only one project called <a href="https://github.com/WisdomSky/Cloudflared-web"
+        target="_blank">cloudflared-web</a> providing a simple web UI, but I
+    strongly disliked it loading the daemon as an NPM dependency – as this software may handle
+    sensitive unencrypted data, I wanted to only run the official binaries.
+    Having no alternative implementations, I've made a web UI myself. The app was
+    styled according to Umbrel's design system, hence, in my humble opinion, it nicely fits the
+    Umbrel ecosystem.</p>
+
+<center>
+    <img src="{% link /assets/img/projects/umbrel-cloudflared/screenshots.jpg %}"
+        style="width: 100%;" alt="Screenshots" />
+    <small>Screenshots from Umbrel app store</small>
+</center>
+
+<p>
+<ul>
+    <li>The app allows setting up the tunnel using the service start command shown in the Cloudflare
+        dashboard</li>
+    <li>With this app you can expose both public apps and those protected by Umbrel auth following
+        the <a
+            href="https://github.com/Radiokot/umbrel-cloudflared/wiki/How-to-set-up-Cloudflare-Tunnel-on-your-Umbrel"
+            target="_blank">detailed guide</a></li>
+    <li>Once set up, the app shows active routes: public endpoints and corresponding local URLs</li>
+</ul>
+</p>
+
+<center>
+    <a class="button" target="_blank" href="https://apps.umbrel.com/app/cloudflared">
+        {% include emoji.html name = 'umbrel' %} App in the Umbrel store</a>
+
+    <a class="button" href="https://github.com/Radiokot/umbrel-cloudflared" target="_blank">{%
+        include emoji.html
+        name = 'github' %} Project on GitHub</a>
+</center>
+
+<br>
+<p>From a technical perspective, the app is a Docker Compose deployment with two containers:
+<ol>
+    <li>Web UI controlling the tunnel – a SvelteKit app with backend and frontend</li>
+    <li>Connector – the official cloudflared binary combined with a simple control loop bash script
+    </li>
+</ol>
+</p>
+<p>
+    If you like this app and want to support the project, you can
+    <a href="{% link tip.html %}">make a donation</a> with your preferred payment method.
+</p>
+<br>
