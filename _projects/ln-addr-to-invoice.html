@@ -36,10 +36,16 @@ background_color: "#212121"
         class="button"
         href="https://github.com/Radiokot/ln-addr-to-invoice"
         target="_blank">{% include emoji.html name = 'github' %} Project on GitHub</a>
-    <a class="button"
-        href="{{ "lightning:" | append: site.lightning }}">{% include emoji.html name = 'lightning' actual = '⚡' %} Send me a tip</a>
 </center>
-<br/><br/><br/>
+<br/>
+<p>
+    If you find this app useful and want to support the project, you can
+    <a href="{% link tip.html %}">make a donation</a> with your preferred payment method.
+    On-chain Bitcoin and Lightning are accepted, of course.
+    I am very grateful to everyone supporting my work
+    {% include emoji.html name = 'heart' actual = '♥' %}
+</p>
+<br/>
 <center>
     <img
         class="footer-img"
