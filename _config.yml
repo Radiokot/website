@@ -31,7 +31,6 @@ defaults:
       layout: "project"
       background_color: "white"
       has_background_image: true
-      has_footer_image: true
       author: "oleg"
       is_dead: false
 
