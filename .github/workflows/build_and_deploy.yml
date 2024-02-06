@@ -27,7 +27,9 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    environment: DO
+    environment: 
+      name: DO
+      url: ${{ vars.PUBLIC_URL }}
     needs: build
 
     steps:
