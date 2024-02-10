@@ -38,7 +38,7 @@ body {
 }
 
 #header #social_buttons {
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 #header #social_buttons svg {
@@ -55,6 +55,8 @@ body {
 }
 
 #header #email {
+    display: block;
+    margin-top: 1vh;
     font-size: 10pt;
     opacity: 0.8;
     transition: all ease-out 100ms;
