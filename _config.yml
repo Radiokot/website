@@ -7,6 +7,7 @@ lightning: oleg@radiokot.com.ua
 
 collections:
   authors:
+    output: false
   projects:
     output: true
     permalink: /p/:title
@@ -18,8 +19,8 @@ collections:
       - voda.html
       - physical-object-layout.html
       - citatnik.html
-      - feed.html
       - hammill.html
+      - feed.html
       - vkdocs.html
       - likechecker.html
 
