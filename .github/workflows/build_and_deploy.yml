@@ -3,6 +3,9 @@ name: Build and deploy the website
 on:
   push:
     branches: ["main"]
+    paths-ignore:
+      - 'README.md'
+      - 'start_dev.sh'
   workflow_dispatch:
 
 jobs:
