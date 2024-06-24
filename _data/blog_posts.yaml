@@ -34,3 +34,8 @@
   title: "Bike navigation display: Making of" 
   description: In this article, I tell how my bike navigation display was built and highlight all the nuances
   url: https://blog.radiokot.com.ua/bike-nav-display
+
+- slug: realtek-popping-fix
+  title: "A combined solution for Realtek audio popping" 
+  description: To fix the issue, we must disable idle power management in the driver and make the tweak persistent
+  url: https://www.reddit.com/r/thinkpad/comments/1dn91pb/a_combined_solution_for_audio_poppingcrackling/
