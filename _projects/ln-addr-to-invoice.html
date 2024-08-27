@@ -1,6 +1,7 @@
 ---
 title: Lightning Address to Invoice
-description: A small Android helper enabling payments to email-like Bitcoin Lightning addresses from unsupported wallets
+description: "A small Android helper enabling payments to email-like Bitcoin Lightning addresses
+from unsupported wallets"
 author: oleg_en
 background_color: "#212121"
 ---
@@ -8,36 +9,88 @@ background_color: "#212121"
     <span itemprop="description">Some popular Bitcoin Lightning wallets, like Muun
         or Blue Wallet, don't support email-like Lightning addresses. This app allows
         paying to such addresses by turning them to convenient invoices.</span>
-    For me, it is helpful when zapping and tipping in Nostr.</p>
+    For me, it is helpful when zapping and tipping in Nostr.
+</p>
+
 <div class="video-container">
-    <iframe
-        src="https://www.youtube.com/embed/FMpSQ-l64Cw?color=white&modestbranding=1&rel=0"
+    <iframe src="https://www.youtube.com/embed/FMpSQ-l64Cw?color=white&modestbranding=1&rel=0"
         frameborder="0"
         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </div>
-<p>To use the app, click on the Lightning address link (like tip or zap in
-    Nostr) and select "LN Address to Invoice" app. Follow the instructions and then
-    pay the invoice with your favorite wallet.</p>
+
+<br>
+<p>This utility is launched when you interact with addresses in your browser or other apps. Here's
+    how it is done:</p>
+
+<div class="row">
+    <div class="col-md-8">
+        <h4>Clicking an address</h4>
+        <p>Sometimes, a Lightning address is a clickable link, just like an email. When you click
+            it,
+            LN Address to Invoice appears.</p>
+    </div>
+    <div class="col-md-4">
+        <br>
+        <center>
+            <img alt="Clicking an address"
+                src="{% link /assets/img/projects/{{ page.slug }}/clicking.gif %}" width="200">
+        </center>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h4>Selecting an address</h4>
+        <p>Often a Lightning address is just a text. In this case, select it and in the appeared
+            system
+            menu look for the <b>Send sats</b> action.</p>
+    </div>
+    <div class="col-md-4">
+        <br>
+        <center>
+            <img alt="Selecting an address"
+                src="{% link /assets/img/projects/{{ page.slug }}/selection.gif %}" width="200">
+        </center>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-8">
+        <h4>Copy-pasting an address</h4>
+        <p>If you see a Lightning address which is neither clickable nor selectable, or the
+            presenting
+            app
+            doesn't support selection actions, just copy the address from there and paste into LN
+            Address to
+            Invoice with the Paste button in the header of the intro screen, or with the
+            <b>Paste address</b> launcher icon shortcut.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <br>
+        <center>
+            <img alt="Launcher icon shortcut"
+                src="{% link /assets/img/projects/{{ page.slug }}/shortcut.gif %}" width="200">
+        </center>
+    </div>
+</div>
+
+<br>
 <p>The app doesn't add any extra fee to your payment.</p>
+
 <center>
-    <a
-        itemprop="downloadUrl"
-        class="button"
-        href="https://f-droid.org/packages/ua.com.radiokot.lnaddr2invoice/"
-        target="_blank">{% include emoji.html name = 'fdroid' %} Get from F-Droid</a>
-    <a
-        itemprop="downloadUrl"
-        class="button"
+    <a class="button" href="https://github.com/Radiokot/ln-addr-to-invoice" target="_blank">{%
+        include emoji.html name = 'github' %} Project on GitHub</a>
+    <a itemprop="downloadUrl" class="button"
+        href="https://f-droid.org/packages/ua.com.radiokot.lnaddr2invoice/" target="_blank">{%
+        include emoji.html name = 'fdroid' %} Get from F-Droid</a>
+    <br>
+    <a itemprop="downloadUrl" class="button"
         href="https://play.google.com/store/apps/details?id=ua.com.radiokot.lnaddr2invoice"
         target="_blank">{% include emoji.html name = 'gplay' %} Get from Google Play</a>
-    <br>
-    <a
-        class="button"
-        href="https://github.com/Radiokot/ln-addr-to-invoice"
-        target="_blank">{% include emoji.html name = 'github' %} Project on GitHub</a>
 </center>
-<br/>
+<br>
 <p>
     If you find this app useful and want to support the project, you can
     <a href="{% link tip.html %}">make a donation</a> with your preferred payment method.
@@ -45,10 +98,4 @@ background_color: "#212121"
     I am very grateful to everyone supporting my work
     {% include emoji.html name = 'heart' actual = '♥' %}
 </p>
-<br/>
-<center>
-    <img
-        class="footer-img"
-        alt="{{ page.title }}"
-        src="{% link /assets/img/projects/{{ page.slug }}/footer.png %}">
-</center>
+<br>
