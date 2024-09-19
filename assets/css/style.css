@@ -8,6 +8,11 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+a {
+    text-decoration-thickness: 0.05em;
+    text-underline-offset: 0.15em;
+}
+
 .hidden-link {
     text-decoration: none;
     color: inherit
