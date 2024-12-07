@@ -3,119 +3,119 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
-    <head>
-        {% include head_styles.html %}
+<head>
+    {% include head_styles.html %}
 
-        <title>{{ site.title }}</title>
-        {% assign og_image_path = "/assets/img/og-image.jpg" %}
-        <meta
-            property="og:image"
-            content="{{ og_image_path | append: "?v=2" | absolute_url}}"
-            data-check-existence="{% link {{ og_image_path }} %}">
-        <meta property="og:image:width" content="1200">
-        <meta property="og:image:height" content="650">
-        <meta property="og:site_name" content="{{ site.title }}">
-        <meta property="og:title" content="{{ site.title }}">
-        <meta property="og:description" content="{{ site.description  }}">
-        <meta property="og:url" content="{{ site.url }}">
-        <meta name="lightning" content="{{ site.lightning }}">
+    <title>{{ site.title }}</title>
+    {% assign og_image_path = "/assets/img/og-image.jpg" %}
+    <meta property="og:image" content="{{ og_image_path | append: " ?v=2" | absolute_url}}"
+        data-check-existence="{% link {{ og_image_path }} %}">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="650">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:description" content="{{ site.description  }}">
+    <meta property="og:url" content="{{ site.url }}">
+    <meta name="lightning" content="{{ site.lightning }}">
 
-        <script>
-            var hash = window.location.hash;
-            switch (hash) {
-                case "#feed":
-                    window.location.replace("p/feed");
-                    break;
-                case "#citatnik":
-                    window.location.replace("p/citatnik");
-                    break;
-                case "#likechecker":
-                    window.location.replace("p/likechecker");
-                    break;
-                case "#hammill":
-                    window.location.replace("p/hammill")
-            }
-        </script>
-    </head>
+    <script>
+        var hash = window.location.hash;
+        switch (hash) {
+            case "#feed":
+                window.location.replace("p/feed");
+                break;
+            case "#citatnik":
+                window.location.replace("p/citatnik");
+                break;
+            case "#likechecker":
+                window.location.replace("p/likechecker");
+                break;
+            case "#hammill":
+                window.location.replace("p/hammill")
+        }
+    </script>
+</head>
 
-    <body>
-        <header id="header" class="col-lg-4 col-md-5">
-            {% include main_header_content.html %}
-        </header>
-        
-        <div id="content" class="offset-lg-4 col-lg-8 offset-md-5 col-md-7">
-            <div class="container">
-                <a class="hidden-link" href="{% link notes.html %}">
-                    <h1>Notes</h1>
-                </a>
-                <div class="feed">
+<body>
+    <header id="header" class="col-lg-4 col-md-5">
+        {% include main_header_content.html %}
+    </header>
 
-                    {% assign sorted_posts = site.data.blog_posts | reverse %}
-                    {% for post in sorted_posts limit: 3 %}
-                        <a class="hidden-link" href="{{ post.url }}">
-                            {% assign mod_2 = forloop.index0 | modulo: 2 %}
-                            <article
-                                class="feed-entry row
+    <div id="content" class="offset-lg-4 col-lg-8 offset-md-5 col-md-7">
+        <div class="container">
+            <a class="hidden-link" href="{% link notes.html %}">
+                <h1>Notes</h1>
+            </a>
+            <div class="feed">
+
+                {% assign sorted_posts = site.data.blog_posts | reverse %}
+                {% for post in sorted_posts limit: 3 %}
+                <a class="hidden-link" href="{{ post.url }}">
+                    {% assign mod_2 = forloop.index0 | modulo: 2 %}
+                    <article class="feed-entry row
                                 {% if mod_2 == 0 %}
                                     feed-entry-even
                                 {% else %}
                                     feed-entry-odd
                                 {% endif %}">
-                                <div class="text-container col-lg-6 col-xl-7">
-                                    <h3>{{ post.title }}</h3>
-                                    <p>{{ post.description }}</p>
-                                </div>
-                                <div class="img-container col-lg-6 col-xl-5">
-                                    <img src="{% link /assets/img/blog_posts/{{ post.slug }}/thumbnail.jpg %}"alt="{{
+                        <div class="text-container col-lg-6 col-xl-7">
+                            <h3>{{ post.title }}</h3>
+                            <p>{{ post.description }}</p>
+                        </div>
+                        <div class="img-container col-lg-6 col-xl-5">
+                            <img src="{% link /assets/img/blog_posts/{{ post.slug }}/thumbnail.jpg %}"
+                                alt="{{
                                     post.title }}">
-                                </div>
-                            </article>
-                        </a>
-                    {% endfor %}
-                </div>
+                        </div>
+                    </article>
+                </a>
+                {% endfor %}
+            </div>
 
-                <br>
+            <br>
 
-                <center>
-                    <a class="button" href="{% link notes.html %}">All notes</a>
-                </center>
+            <center>
+                <a class="button" href="{% link notes.html %}">All notes</a>
+            </center>
 
-                <br><br>
-                <h1>Projects</h1>
-                <div class="feed">
-                    {% for project in site.projects %}
-                        <a class="hidden-link" href="{{ project.url }}">
-                            {% assign mod_2 = forloop.index0 | modulo: 2 %}
-                            <article
-                                class="feed-entry row
+            <br><br>
+            <h1>Projects</h1>
+            <div class="feed">
+                {% for project in site.projects %}
+                <a class="hidden-link" href="{{ project.url }}">
+                    {% assign mod_2 = forloop.index0 | modulo: 2 %}
+                    <article class="feed-entry row
                                 {% if mod_2 == 0 %}
                                     feed-entry-even
                                 {% else %}
                                     feed-entry-odd
                                 {% endif %}">
-                                <div class="text-container col-lg-6 col-xl-7">
-                                    <h3>
-                                        {% if project.is_dead %}
-                                            {% include emoji.html name = 'headstone' actual = '🪦' %}
-                                        {% endif %}
-                                        {{ project.title }}</h3>
-                                    <p>{{ project.description }}</p>
-                                </div>
-                                <div class="img-container col-lg-6 col-xl-5">
-                                    <img src="{% link /assets/img/projects/{{ project.slug }}/thumbnail.jpg %}"alt="{{
+                        <div class="text-container col-lg-6 col-xl-7">
+                            <h3>
+                                {% if project.is_dead %}
+                                {% include emoji.html name = 'headstone' actual = '🪦' %}
+                                {% endif %}
+                                {{ project.title }}</h3>
+                            <p>{{ project.description }}</p>
+                        </div>
+                        <div class="img-container col-lg-6 col-xl-5">
+                            <img src="{% link /assets/img/projects/{{ project.slug }}/thumbnail.jpg %}"
+                                alt="{{
                                     project.title }}">
-                                </div>
-                            </article>
-                        </a>
-                    {% endfor %}
-                </div>
-                <br>
+                        </div>
+                    </article>
+                </a>
+                {% endfor %}
             </div>
+            <br>
         </div>
+    </div>
 
-        <script src="{% link /assets/js/main.js?v=2 %}"></script>
+    {% assign main_js_path = "/assets/js/main.js" %}
+    <script src="{{ main_js_path | append: " ?v=2" | absolute_url}}"
+        data-check-existence="{% link {{ main_js_path }} %}"></script>
 
-        {% include bottom_styles.html %}
-    </body>
+    {% include bottom_styles.html %}
+</body>
 
 </html>
