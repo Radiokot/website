@@ -1,7 +1,8 @@
 url: "https://radiokot.com.ua" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-title: "Олег Корецкий" # the name of your site, e.g. ACME Corp.
-description: "Я люблю решать практические задачи с помощью программирования и электроники"
+lang: "en"
+title: "Oleg Koretsky" # the name of your site, e.g. ACME Corp.
+description: "I like to solve practical problems with programming and electronics"
 email: oleg@radiokot.com.ua
 lightning: oleg@radiokot.com.ua
 
@@ -16,10 +17,10 @@ collections:
       - photoprism-android-gallery.html
       - ln-addr-to-invoice.html
       - bike-nav-display.html
-      - voda.html
       - physical-object-layout.html
-      - citatnik.html
       - hammill.html
+      - voda.html
+      - citatnik.html
       - feed.html
       - vkdocs.html
       - likechecker.html

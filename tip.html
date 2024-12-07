@@ -2,19 +2,19 @@
 permalink: /tip
 ---
 <!DOCTYPE html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
     {% include head_styles.html %}
 
-    <title>Tip – Oleg Koretsky</title>
+    <title>Tip – {{ site.title }}</title>
     {% assign og_image_path = "/assets/img/og-image.jpg" %}
     <meta property="og:image" content="{{ og_image_path | append: " ?v=1" | absolute_url}}"
         data-check-existence="{% link {{ og_image_path }} %}">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="650">
     <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:title" content="Oleg Koretsky">
+    <meta property="og:title" content="{{ site.title }}">
     <meta property="og:description" content="Tip">
     <meta property="og:url" content="{{ site.url }}">
     <meta name="lightning" content="{{ site.lightning }}">
@@ -22,7 +22,7 @@ permalink: /tip
 
 <body>
     <header id="header" class="col-lg-4 col-md-5">
-        {% include main_header_content_en.html %}
+        {% include main_header_content.html %}
     </header>
     <div id="content" class="offset-lg-4 col-lg-8 offset-md-5 col-md-7">
         <div class="container">

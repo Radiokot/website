@@ -2,14 +2,14 @@
 ---
 
 <!DOCTYPE html>
-<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="{{ page.lang | default: site.lang }}" xmlns="http://www.w3.org/1999/xhtml">
 
     {% assign author = site.authors | where: 'short_name', page.author | first %}
 
     <head>
         {% include head_styles.html %}
 
-        <title>{{ page.title }} – {{ author.name }}</title>
+        <title>{{ page.title }} – {{ site.title }}</title>
         {% assign og_image_path = "/assets/img/projects/" | append: page.slug | append: "/thumbnail.jpg" %}
         <meta
             property="og:image"

@@ -1,7 +1,7 @@
 ---
 ---
 <!DOCTYPE html>
-<html lang="ru-RU" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
     <head>
         {% include head_styles.html %}
@@ -15,7 +15,7 @@
         <meta property="og:image:width" content="1200">
         <meta property="og:image:height" content="650">
         <meta property="og:site_name" content="{{ site.title }}">
-        <meta property="og:title" content="Меня зовут Олег">
+        <meta property="og:title" content="{{ site.title }}">
         <meta property="og:description" content="{{ site.description  }}">
         <meta property="og:url" content="{{ site.url }}">
         <meta name="lightning" content="{{ site.lightning }}">
@@ -46,7 +46,7 @@
         <div id="content" class="offset-lg-4 col-lg-8 offset-md-5 col-md-7">
             <div class="container">
                 <a class="hidden-link" href="{% link notes.html %}">
-                    <h1>Заметки</h1>
+                    <h1>Notes</h1>
                 </a>
                 <div class="feed">
 
@@ -77,11 +77,11 @@
                 <br>
 
                 <center>
-                    <a class="button" href="{% link notes.html %}">Все заметки</a>
+                    <a class="button" href="{% link notes.html %}">All notes</a>
                 </center>
 
                 <br><br>
-                <h1>Проекты</h1>
+                <h1>Projects</h1>
                 <div class="feed">
                     {% for project in site.projects %}
                         <a class="hidden-link" href="{{ project.url }}">
