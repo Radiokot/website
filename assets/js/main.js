@@ -1,4 +1,4 @@
-var HEADER_BACKGROUNDS_COUNT = 7;
+var HEADER_BACKGROUNDS_COUNT = 8;
 
 var setRandomHeaderBackground = function () {
     var fileNumber = 1 + Math.floor(Math.random() * 100) % HEADER_BACKGROUNDS_COUNT
