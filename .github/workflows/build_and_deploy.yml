@@ -10,11 +10,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Build the site
         run: |
@@ -23,13 +23,13 @@ jobs:
           jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
 
       - name: Upload the build
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: site
           path: _site/
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     environment: 
       name: DO
       url: ${{ vars.PUBLIC_URL }}
@@ -37,12 +37,12 @@ jobs:
 
     steps:
       - name: Download the build
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: site
 
       - name: Rsync the build to the environment
-        uses: burnett01/rsync-deployments@5.2.1
+        uses: burnett01/rsync-deployments@7.0.2
         with:
           switches: -avzr
           remote_path: ${{ secrets.DEPLOYMENT_PATH }}
@@ -51,7 +51,7 @@ jobs:
           remote_key: ${{ secrets.WEB_USER_KEY }}
 
       - name: Purge Cloudflare cache
-        uses: appleboy/ssh-action@v0.1.6
+        uses: appleboy/ssh-action@v1.2.1
         with:
           host: ${{ secrets.HOSTNAME }}
           username: ${{ secrets.WEB_USER_NAME }}
