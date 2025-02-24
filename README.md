@@ -5,6 +5,7 @@ This is [my website](https://radiokot.com.ua) built with Jekyll. It came to repl
 - Large files, like books, must be manually placed under the "files" directory on the server
 - Install the [recommended VS Code extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_recommended-extensions)
 - To allow CI user SSH login, set the password with `passwd` and don't forget to set the shell in the `/etc/passwd` file instead of `/usr/sbin/nologin`
+- If encountered `rsync - protocol version mismatch -- is your shell clean`, see the previous note
 
 ### CI variables, defined in GitHub env secrets
 |Name|Meaning|
