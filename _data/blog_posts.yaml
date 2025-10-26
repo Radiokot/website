@@ -1,5 +1,3 @@
-# TODO: Include blog to the site
-
 - slug: streetster-spitfire
   title: Обновил городской велосипед
   description: Придал своему Streetster Broadway 7 шоссейный вид. Жаль, что легче он от этого не стал
@@ -39,3 +37,8 @@
   title: "A combined solution for Realtek audio popping" 
   description: The root cause of audio popping/crackling before and after playback is not DPC latency or a faulty cable, but powering on and off the audio chip
   url: https://blog.radiokot.com.ua/realtek-audio-popping-fix
+
+- slug: heliboard-no-suggestions
+  title: "HeliBoard keyboard doesn't show suggestions in Google Keep"
+  description: I debugged the keyboard, found out it's not a bug and there's an easy solution
+  url: https://blog.radiokot.com.ua/heliboard-no-suggestions
