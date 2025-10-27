@@ -13,6 +13,7 @@ collections:
     output: true
     permalink: /p/:title
     order:
+      - 4money.html
       - umbrel-cloudflared.html
       - photoprism-android-gallery.html
       - ln-addr-to-invoice.html
