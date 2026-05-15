@@ -13,6 +13,7 @@ collections:
     output: true
     permalink: /p/:title
     order:
+      - press-cut.html
       - 4money.html
       - umbrel-cloudflared.html
       - photoprism-android-gallery.html
