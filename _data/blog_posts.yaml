@@ -29,12 +29,12 @@
   url: https://blog.radiokot.com.ua/ms-edge-search
 
 - slug: bike-nav-display
-  title: "Bike navigation display: Making of" 
+  title: "Bike navigation display: Making of"
   description: In this article, I tell how my bike navigation display was built and highlight all the nuances
   url: https://blog.radiokot.com.ua/bike-nav-display
 
 - slug: realtek-popping-fix
-  title: "A combined solution for Realtek audio popping" 
+  title: "A combined solution for Realtek audio popping"
   description: The root cause of audio popping/crackling before and after playback is not DPC latency or a faulty cable, but powering on and off the audio chip
   url: https://blog.radiokot.com.ua/realtek-audio-popping-fix
 
@@ -42,3 +42,8 @@
   title: "HeliBoard keyboard doesn't show suggestions in Google Keep"
   description: I debugged the keyboard, found out it's not a bug and there's an easy solution
   url: https://blog.radiokot.com.ua/heliboard-no-suggestions
+
+- slug: poster-editor-compose
+  title: "Tips for implementing a poster editor in Compose"
+  description: "I recently added a poster editor into my stamp cutter app and want to share some tips you may find useful if you ever have to implement an editor like this"
+  url: https://www.reddit.com/r/androiddev/comments/1vq0j4p/implemented_a_poster_editor_have_tips_to_share/
