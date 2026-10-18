@@ -6,6 +6,7 @@ body {
     top: 0;
     background-color: #f5f8fd;
     font-family: 'Open Sans', sans-serif;
+    scrollbar-color: #949494  #f5f8fd;
 }
 
 a {

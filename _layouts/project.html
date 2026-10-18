@@ -26,9 +26,10 @@
         <style>
             html,
             body {
-                background: {{ page.background_color}}
+                background: {{ page.background_color}} {{ page.background_extra }}
                 {% if page.has_background_image %}
                     url({% link /assets/img/projects/{{ page.slug}}/bg.png %}) repeat{% endif %};
+                scrollbar-color: {{ page.on_background_color }} {{ page.background_color}};
             }
         </style>
     </head>
