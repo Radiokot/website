@@ -1,0 +1,39 @@
+# Oleg Koretsky
+
+> Personal website of Oleg Koretsky (Radiokot), a developer who solves practical problems with programming and electronics. The site hosts his technical notes and a portfolio of projects: Android apps, self-hosted tools, and Arduino hardware.
+
+Content is mostly in English, with a few older projects described in Russian. Notes are published on the blog at blog.radiokot.com.ua and are listed at radiokot.com.ua/notes. Project pages live under radiokot.com.ua/p/.
+
+## Notes
+
+- [All notes](https://radiokot.com.ua/notes): Index of all blog posts
+- [HeliBoard keyboard doesn't show suggestions in Google Keep](https://blog.radiokot.com.ua/heliboard-no-suggestions): Debugging why the keyboard shows no suggestions in Google Keep. It turns out not to be a bug, and there is an easy solution
+- [A combined solution for Realtek audio popping](https://blog.radiokot.com.ua/realtek-audio-popping-fix): Audio popping and crackling before and after playback is caused by the audio chip powering on and off, not by DPC latency or a faulty cable
+- [Tips for implementing a poster editor in Compose](https://www.reddit.com/r/androiddev/comments/1vq0j4p/implemented_a_poster_editor_have_tips_to_share/): Tips from building a poster editor for the stamp cutter app (Reddit r/androiddev)
+
+## Projects
+
+- [Press-Cut – a stamp cutter](https://radiokot.com.ua/p/press-cut): Cut digital postage stamps from what your camera sees
+- [4Money](https://radiokot.com.ua/p/4money): Expense tracking app powered by Supabase and PowerSync. Not yet live, but the code has interesting solutions
+- [Cloudflare Tunnel for Umbrel](https://radiokot.com.ua/p/umbrel-cloudflared): Umbrel home server app that makes other apps accessible from the Internet through the Cloudflare network
+- [Gallery for PhotoPrism](https://radiokot.com.ua/p/photoprism-android-gallery): Android gallery for a PhotoPrism library with many useful features
+- [Lightning Address to Invoice](https://radiokot.com.ua/p/ln-addr-to-invoice): Android helper that enables payments to email-like Bitcoin Lightning addresses from wallets that don't support them
+- [Bike navigation display](https://radiokot.com.ua/p/bike-nav-display): Simple Arduino-based wireless display for navigating bike rides
+- [Physical Object Layout](https://radiokot.com.ua/p/physical-object-layout): Android layout that scales its content correctly for designing physical objects such as credit cards and passports
+- [The Peter Hammill Book](https://radiokot.com.ua/p/hammill): Collection of stories, poems and drawings from "Killers, Angels, Refugees" and "Mirrors, Dreams, and Miracles", plus songs by Peter Hammill and Van der Graaf Generator
+- [Сканер для карт «Вода в кармане»](https://radiokot.com.ua/p/voda): Android NFC scanner that shows the balance and remaining liters on a "Вода в кармане" card
+- [Просто цитатник](https://radiokot.com.ua/p/citatnik): Storage for book excerpts, with import from Amazon Kindle without connecting to a computer
+
+## Contact
+
+- [GitHub](https://github.com/Radiokot): Source code for most projects
+- [LinkedIn](https://www.linkedin.com/in/radiokot/): Professional profile
+- [Telegram](https://t.me/radiokot42): Direct messages
+- [Instagram](https://www.instagram.com/radiokot42/): Personal profile
+- Email: oleg@radiokot.com.ua
+
+## Optional
+
+- [Теплофид](https://radiokot.com.ua/p/feed): Retired. A feed of inspiring posts from VKontakte and Tumblr pages that ran for 11 years
+- [vkdocs.py](https://radiokot.com.ua/p/vkdocs): Retired. Script for finding a user's public documents on VK, likely no longer working
+- [VK LikeChecker](https://radiokot.com.ua/p/likechecker): Retired. Service for seeing what a person liked on VKontakte, no longer working
